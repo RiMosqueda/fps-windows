@@ -31,6 +31,7 @@ Controles
 - WASD mover · Shift caminar (silencioso) · Ctrl o C agacharse · Espacio saltar
 - Ratón apuntar · Clic izquierdo disparar · Clic derecho zoom (Hornet, Ranger,
   Longshot) · R recargar · 1/2 arma principal/secundaria
+- 3 cuchillo: siempre disponible y con él corres más rápido
 - B menú de armas: todas libres, en cualquier momento; se conservan al morir
 - Escape liberar o capturar el cursor · F9 reiniciar el audio si se queda mudo
 - Sensibilidad del ratón: barra en la pantalla de conexión, o pulsa Escape
