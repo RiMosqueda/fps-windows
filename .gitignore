@@ -1,0 +1,4 @@
+# Registros locales de cada partida (pueden incluir IPs de la red).
+Logs/
+# Datos de depuración de Unity que no se distribuyen.
+*_DoNotShip/

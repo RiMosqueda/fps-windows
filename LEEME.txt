@@ -1,0 +1,50 @@
+﻿DEPOT · PROTOTIPO TÁCTICO · VERSIÓN WINDOWS
+===========================================
+
+Requisitos
+- Windows 10 u 11 de 64 bits. No hace falta instalar Unity ni nada más.
+- Copia la carpeta completa: Depot\Depot.exe necesita Depot\Depot_Data y los
+  archivos .dll que hay a su lado.
+
+Primera ejecución
+- Windows SmartScreen puede avisar de que la aplicación no está firmada:
+  pulsa "Más información" > "Ejecutar de todas formas".
+- Si el Firewall de Windows pregunta por Depot.exe, permite el acceso en
+  redes PRIVADAS (necesario solo para jugar en red local).
+
+Jugar en este PC (dos ventanas)
+1. Doble clic en "Iniciar partida local.bat". Arranca el servidor y, cuando
+   está listo, dos clientes de 1280 × 720 conectados a 127.0.0.1:7777.
+2. Juegas en la ventana que tiene el foco. Para cambiar de jugador, haz clic
+   en la otra ventana y pulsa Escape para capturar el cursor.
+3. Para cerrar todo: "Detener partida.bat".
+
+Jugar en red local (dos PC)
+1. En el PC que hace de servidor: "Servidor LAN.bat" y escribe su IPv4
+   (el script muestra las direcciones del equipo, por ejemplo 192.168.1.20).
+2. En cada PC que juega (incluido el servidor si también juega):
+   "Cliente.bat", escribe la IPv4 del servidor y el puerto 7777, CONECTAR.
+3. Para cerrar el servidor: "Detener partida.bat" en el PC servidor.
+   Máximo dos jugadores.
+
+Controles
+- WASD mover · Shift caminar (silencioso) · Ctrl o C agacharse · Espacio saltar
+- Ratón apuntar · Clic izquierdo disparar · Clic derecho zoom (Hornet, Ranger,
+  Longshot) · R recargar · 1/2 arma principal/secundaria
+- B menú de armas: todas libres, en cualquier momento; se conservan al morir
+- Escape liberar o capturar el cursor · F9 reiniciar el audio si se queda mudo
+- Sensibilidad del ratón: barra en la pantalla de conexión, o pulsa Escape
+  durante la partida. Se guarda para la próxima vez.
+
+Registros
+- La carpeta Logs guarda un registro por proceso. Si algo falla, envía esos
+  archivos (el del servidor y los de los clientes).
+
+Qué conviene comprobar en este PC
+- FPS del HUD (objetivo de diseño: 60 FPS a 1280 × 720 en un i3-7100 con
+  Intel HD 630). Esta build es Release, sin la sobrecarga de desarrollo.
+- Movimiento, disparo, daño por zona (cabeza / cuerpo / piernas), compra,
+  sonido y animaciones.
+- Conexión entre dos PC en la misma red.
+
+Compilada en Windows. Máximo dos jugadores por partida.
