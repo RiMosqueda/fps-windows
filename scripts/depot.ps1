@@ -5,7 +5,8 @@ param(
     [string]$Action = 'session',
     [string]$Address = '127.0.0.1',
     [ValidateRange(1, 65535)][int]$Port = 7777,
-    [ValidateRange(15, 240)][int]$Fps = 144
+    # 0 = el límite de FPS guardado en la configuración del juego.
+    [ValidateRange(0, 1000)][int]$Fps = 0
 )
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
@@ -84,7 +85,8 @@ if (-not [System.Net.IPAddress]::TryParse($Address, [ref]$ip) -or $ip.AddressFam
 }
 
 $script:RunId = [guid]::NewGuid().ToString('N')
-$common = @('--address', $Address, '--port', "$Port", '--fps', "$Fps", '--run-id', $script:RunId)
+$common = @('--address', $Address, '--port', "$Port", '--run-id', $script:RunId)
+if ($Fps -ge 15) { $common += @('--fps', "$Fps") }
 $window = @('-screen-width', '1280', '-screen-height', '720', '-screen-fullscreen', '0')
 
 if ($Action -eq 'client') {

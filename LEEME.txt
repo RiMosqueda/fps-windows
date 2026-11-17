@@ -14,28 +14,43 @@ Primera ejecución
 
 Jugar en este PC (dos ventanas)
 1. Doble clic en "Iniciar partida local.bat". Arranca el servidor y, cuando
-   está listo, dos clientes de 1280 × 720 conectados a 127.0.0.1:7777.
+   está listo, dos clientes conectados a 127.0.0.1:7777, uno en cada equipo.
 2. Juegas en la ventana que tiene el foco. Para cambiar de jugador, haz clic
    en la otra ventana y pulsa Escape para capturar el cursor.
 3. Para cerrar todo: "Detener partida.bat".
 
-Jugar en red local (dos PC)
+Jugar en red local (hasta 10 jugadores, 5 contra 5)
 1. En el PC que hace de servidor: "Servidor LAN.bat" y escribe su IPv4
    (el script muestra las direcciones del equipo, por ejemplo 192.168.1.20).
 2. En cada PC que juega (incluido el servidor si también juega):
    "Cliente.bat", escribe la IPv4 del servidor y el puerto 7777, CONECTAR.
 3. Para cerrar el servidor: "Detener partida.bat" en el PC servidor.
-   Máximo dos jugadores.
+
+El modo de juego: Sabotaje
+- Dos equipos, Ámbar y Cian. Con un solo equipo hay calentamiento (armas
+  libres y reaparición); con jugadores en los dos empieza la partida.
+- Rondas sin reaparición. Los atacantes plantan la carga en el site A o B
+  (mantén E 3,5 s en la zona de carga, quieto) y la protegen 40 s hasta que
+  detona. Los defensores eliminan a los atacantes, aguantan los 100 s de la
+  ronda o desactivan la carga (mantén E 6 s junto a ella).
+- Cada ronda empieza con 8 s de compra en la base (B). Ganar da 3000
+  créditos, perder 1900 (más un extra por derrotas seguidas), cada baja 300
+  y plantar o desactivar 300. Si mueres pierdes las armas compradas.
+- Gana el primero en llegar a 7 rondas; tras 6 rondas se cambia de lado.
 
 Controles
 - WASD mover · Shift caminar (silencioso) · Ctrl o C agacharse · Espacio saltar
 - Ratón apuntar · Clic izquierdo disparar · Clic derecho zoom (Hornet, Ranger,
   Longshot) · R recargar · 1/2 arma principal/secundaria
 - 3 cuchillo: siempre disponible y con él corres más rápido
-- B menú de armas: todas libres, en cualquier momento; se conservan al morir
+- B menú de armas (durante la fase de compra; en el calentamiento, libres)
+- E (o F) mantenida: plantar o desactivar la carga
 - Escape liberar o capturar el cursor · F9 reiniciar el audio si se queda mudo
-- Sensibilidad del ratón: barra en la pantalla de conexión, o pulsa Escape
-  durante la partida. Se guarda para la próxima vez.
+- Configuración (Escape en partida, o el botón de la pantalla de conexión):
+  ratón, mira, pantalla completa, límite de FPS (o sin límite), campo de
+  visión y audio. Se guarda para la próxima vez.
+- Pantalla completa: los dos clientes de la partida local comparten el
+  ajuste; si lo activas, cambia de uno a otro con Alt+Tab.
 
 Registros
 - La carpeta Logs guarda un registro por proceso. Si algo falla, envía esos
@@ -48,4 +63,4 @@ Qué conviene comprobar en este PC
   sonido y animaciones.
 - Conexión entre dos PC en la misma red.
 
-Compilada en Windows. Máximo dos jugadores por partida.
+Compilada en Windows. Máximo diez jugadores por partida (5 contra 5).
