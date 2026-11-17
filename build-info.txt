@@ -1,3 +1,3 @@
 Depot Tactical Prototype · Windows x64 · Mono · Release
 Unity 6000.6.9f1
-Generado 2026-11-16 23:30
+Generado 2026-11-17 02:22
